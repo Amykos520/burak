@@ -1,0 +1,34 @@
+void main() {
+ 
+  Televizyon birinciTV = Televizyon(ekranBilgisi: 101, modelBilgisi: 'Flut TV');
+  Televizyon ikinciTV = Televizyon(ekranBilgisi: 202, modelBilgisi: 'Mega TV');
+  
+  
+  print(birinciTV.modeladi);
+  print(ikinciTV.modeladi);
+  
+  birinciTV.sesiac();
+  
+  birinciTV.cihazBilgisiGetir();
+  ikinciTV.cihazBilgisiGetir();
+}
+
+
+class Televizyon {
+  int ekranBoyutu=0;
+  String modeladi='Flut Tv';
+  
+  
+  Televizyon({required int ekranBilgisi, required String modelBilgisi}) {
+    ekranBoyutu = ekranBilgisi;
+    modeladi = modelBilgisi;
+  }
+  
+  void sesiac(){
+    print('haporlör sesi açıldı');
+  }
+  
+  void cihazBilgisiGetir(){
+    print('bu cihazın ekran boyutu $ekranBoyutu modeli ise $modeladi');
+  }
+}
